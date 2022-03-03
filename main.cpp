@@ -83,7 +83,6 @@ int analyze() {
     }
     correct = 0;
     for(int j = 0; j < 5; j++) {
-
       if(board[i][j] == word[j]) {
         cout << OUT_GREEN << board[i][j] << OUT_RESET;
         correct++;
@@ -98,7 +97,6 @@ int analyze() {
         goto end;
       }
     }
-
     cout << endl;
   }
 
@@ -132,10 +130,9 @@ int main(int argc, char *argv[]) {
   string all_words[FILE_LENGTH];
   set_words(all_words);
 
-
   word = generate_word(all_words);
 
-  //Type DEBUG in command line to see the word
+  //Type DEBUG as command line argument to see the word
   if(argc > 1) {
     string str = argv[1];
     if(str.compare("DEBUG") == 0) {
